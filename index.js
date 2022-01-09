@@ -11,13 +11,13 @@ let addingRow = document.getElementById("addRow").addEventListener("click", () =
 })
 
 let addingCol = document.getElementById("addCol").addEventListener("click", () => { 
-  //let newCol = document.createElement("td");
-    //newRow.append(newCol)
-   // let column = document.getElementsByTagName("tr");
    for(let i =0; i<table.rows.length; i++)
    {
      //let newCol = table.rows[i].insertCell(-1);
      table.rows[i].insertCell(-1);
-      //table.rows[1].insertCell(-1);
    }
+})
+
+let removeRow = document.getElementById("removeRow").addEventListener("click", () => {
+  table.deleteRow(0);
 })
