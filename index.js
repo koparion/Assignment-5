@@ -38,6 +38,10 @@ let removeColumn = document.getElementById("removeCol").addEventListener("click"
 
 let changeColor = document.getElementById("colors").addEventListener("change", (event) => {
    let newT = document.querySelector(".table");
+   if("" === event.target.value)
+   {
+        newT.style = null;
+   }
   if("red" === event.target.value)
     {
       for(let i = 0; i < table.rows.length; i++)
