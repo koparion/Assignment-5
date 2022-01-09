@@ -28,3 +28,9 @@ let removeColumn = document.getElementById("removeCol").addEventListener("click"
       table.rows[i].deleteCell(-1); 
    } 
 })
+
+let changeColor = document.getElementById("colors").addEventListener("select", (event) => {
+  if(event.document.)
+
+})
+
