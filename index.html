@@ -37,6 +37,7 @@
         <button type="button" id="removeRow" class="btn btn-secondary">Remove Row</button>
         <button type="button" id="removeCol" class="btn btn-secondary">Remove Column</button>
         <form class="p-2">
+          <h5>Change All Cell Colors</h5>
           <label for="cars">Pick a Color:</label>
             <select onchange="changeColor(this)" name="colors" id="colors">
               <option value=""></option>
@@ -44,6 +45,17 @@
               <option id="green" value="green">Green</option>
               <option id="blue" value="blue">Blue</option>
               <option id="orange" value="orange">Orange</option>
+            </select>
+        </form>
+        <form class="p-2">
+          <h5>Select a color then drag on cell to change</h5>
+          <label for="cars">Pick a Color:</label>
+            <select onchange="changeColor(this)" name="colors" id="colors2">
+              <option value=""></option>
+              <option id="red2" value="red">Red</option>
+              <option id="green2" value="green">Green</option>
+              <option id="blue2" value="blue">Blue</option>
+              <option id="orange2" value="orange">Orange</option>
             </select>
         </form>
       </div>
