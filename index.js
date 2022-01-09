@@ -29,8 +29,22 @@ let removeColumn = document.getElementById("removeCol").addEventListener("click"
    } 
 })
 
-let changeColor = document.getElementById("colors").addEventListener("select", (event) => {
-  if(event.document.)
-
-})
+let changeColor = document.getElementById("colors").addEventListener("change", (event) => {
+   if("red" === event.target.value)
+    {
+      table.style.backgroundColor = "red";
+    }
+    if("green" === event.target.value)
+    {
+      table.style.backgroundColor = 'green';
+    }
+    if("blue" === event.target.value)
+    {
+      table.style.backgroundColor = 'blue';
+    }
+    if("orange" === event.target.value)
+    {
+      table.style.backgroundColor = 'orange';
+    }
+  })
 
