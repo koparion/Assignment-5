@@ -37,25 +37,26 @@ let removeColumn = document.getElementById("removeCol").addEventListener("click"
 })
 
 let changeColor = document.getElementById("colors").addEventListener("change", (event) => {
-   if("red" === event.target.value)
+   let newT = document.querySelector(".table");
+  if("red" === event.target.value)
     {
       for(let i = 0; i < table.rows.length; i++)
         {
           //let newCol = table.rows[i].insertCell(-1);
-          table.length[i] = table.style.backgroundColor = "red";
+          newT.style.backgroundColor = "red";
         }
     }
     if("green" === event.target.value)
     {
-      table.style.backgroundColor = 'green';
+      newT.style.backgroundColor = 'green';
     }
     if("blue" === event.target.value)
     {
-      table.style.backgroundColor = 'blue';
+      newT.style.backgroundColor = 'blue';
     }
     if("orange" === event.target.value)
     {
-      table.style.backgroundColor = 'orange';
+      newT.style.backgroundColor = 'orange';
     }
   })
 
