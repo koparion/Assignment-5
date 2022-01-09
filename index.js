@@ -19,5 +19,5 @@ let addingCol = document.getElementById("addCol").addEventListener("click", () =
 })
 
 let removeRow = document.getElementById("removeRow").addEventListener("click", () => {
-  table.deleteRow(0);
+      table.deleteRow(-1);
 })
