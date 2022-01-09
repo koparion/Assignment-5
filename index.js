@@ -3,15 +3,22 @@ let table = document.getElementById("tbody");
 let addingRow = document.getElementById("addRow").addEventListener("click", () => {
   //  document.querySelector("row").innerHTML += '<div class="col border border-dark">${row.children.length + 1}</div>';
     // let row = document.querySelector(".row");  
-    let newRow = document.createElement("tr");
     //let newCol = document.createElement("td");
      //newRow.appendChild(newCol);
   // newRow.classList.add("border-dark my-2")
-    table.append(newRow);
+
+    // let newRow = document.createElement("tr");
+    // table.append(newRow);
+    for(let i = 0; i < table.rows.length; i++)
+   {
+     //let newCol = table.rows[i].insertCell(-1);
+     let row = table.insertRow(-1)
+     row[i].insertCell(-1);
+   }
 })
 
 let addingCol = document.getElementById("addCol").addEventListener("click", () => { 
-   for(let i =0; i < table.rows.length; i++)
+   for(let i = 0; i < table.rows.length; i++)
    {
      //let newCol = table.rows[i].insertCell(-1);
      table.rows[i].insertCell(-1);
@@ -23,7 +30,7 @@ let removeRow = document.getElementById("removeRow").addEventListener("click", (
 })
 
 let removeColumn = document.getElementById("removeCol").addEventListener("click", () => {
-  for(let i =0; i < table.rows.length; i++)
+  for(let i = 0; i < table.rows.length; i++)
    { 
       table.rows[i].deleteCell(-1); 
    } 
@@ -32,7 +39,11 @@ let removeColumn = document.getElementById("removeCol").addEventListener("click"
 let changeColor = document.getElementById("colors").addEventListener("change", (event) => {
    if("red" === event.target.value)
     {
-      table.style.backgroundColor = "red";
+      for(let i = 0; i < table.rows.length; i++)
+        {
+          //let newCol = table.rows[i].insertCell(-1);
+          table.length[i] = table.style.backgroundColor = "red";
+        }
     }
     if("green" === event.target.value)
     {
