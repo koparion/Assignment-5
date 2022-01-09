@@ -64,3 +64,6 @@ let changeColor = document.getElementById("colors").addEventListener("change", (
     }
   })
 
+let resetColor = document.getElementById("reset").addEventListener("click", () =>{
+  document.querySelector(".table").style = null;
+})
