@@ -11,7 +11,7 @@ let addingRow = document.getElementById("addRow").addEventListener("click", () =
 })
 
 let addingCol = document.getElementById("addCol").addEventListener("click", () => { 
-   for(let i =0; i<table.rows.length; i++)
+   for(let i =0; i < table.rows.length; i++)
    {
      //let newCol = table.rows[i].insertCell(-1);
      table.rows[i].insertCell(-1);
@@ -20,4 +20,11 @@ let addingCol = document.getElementById("addCol").addEventListener("click", () =
 
 let removeRow = document.getElementById("removeRow").addEventListener("click", () => {
   table.deleteRow(0);
+})
+
+let removeColumn = document.getElementById("removeCol").addEventListener("click", () => {
+  for(let i =0; i < table.rows.length; i++)
+   { 
+      table.rows[i].deleteCell(-1); 
+   } 
 })
