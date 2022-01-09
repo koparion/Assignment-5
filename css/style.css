@@ -1,0 +1,10 @@
+table,td{
+   height: 50px;
+   border-style: solid;
+   border-color: salmon;
+   border: 1px;
+   border-style: solid;
+}
+tr {
+    height: 50px;
+    }
