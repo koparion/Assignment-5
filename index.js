@@ -1,11 +1,10 @@
 let table = document.getElementById("tbody");
 
 let addingRow = document.getElementById("addRow").addEventListener("click", () => {
-    for(let i = 0; i < table.rows.length; i++)
+    let row = table.insertRow(table.rows.length)
+    for(let i = 0; i < table.rows[0].cells.length; i++)
    {
-     //let newCol = table.rows[i].insertCell(-1);
-    let row = table.insertRow(-1)
-    table.row[i].insertCell(-1);
+    row.insertCell(i);
    }
 })
 
@@ -13,7 +12,7 @@ let addingCol = document.getElementById("addCol").addEventListener("click", () =
    for(let i = 0; i < table.rows.length; i++)
    {
      //let newCol = table.rows[i].insertCell(-1);
-     table.rows[i].insertCell(-1);
+     table.rows[i].insertCell();
    }
 })
 
