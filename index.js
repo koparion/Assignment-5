@@ -12,8 +12,8 @@ let addingRow = document.getElementById("addRow").addEventListener("click", () =
     for(let i = 0; i < table.rows.length; i++)
    {
      //let newCol = table.rows[i].insertCell(-1);
-     let row = table.insertRow(-1)
-     row[i].insertCell(-1);
+    let row = table.insertRow(-1)
+    table.row[i].insertCell(-1);
    }
 })
 
@@ -64,42 +64,13 @@ let changeColor = document.getElementById("colors").addEventListener("change", (
     }
   })
 
-  // let hoverColorChange = document.getElementById("colors").addEventListener("click", (event) => {
-  //   //let hoverChange = document.querySelector(".table").addEventListener("mouseover");
-  //   if("" === event.target.value)
-  //   {
-  //     newT.style.backgroundColor = null;
-  //   }
-  //   if("red" === event.target.value)
-  //    {
-  //      for(let i = 0; i < table.rows.length; i++)
-  //        {
-  //          //let newCol = table.rows[i].insertCell(-1);
-  //          newT.style.backgroundColor = "red";
-  //        }
-  //    }
-  //    if("green" === event.target.value)
-  //    {
-  //      hoverChange = 
-  //      }
-  //    }
-  //    if("blue" === event.target.value)
-  //    {
-  //      newT.style.backgroundColor = 'blue';
-  //    }
-  //    if("orange" === event.target.value)
-  //    {
-  //      newT.style.backgroundColor = 'orange';
-  //    }
-  //  })
-   
-let hoverColorChange = document.getElementById("colors2").addEventListener("change", (event) => {
+let hoverColorChange = document.getElementById("colors2").addEventListener("mouseover", (event) => {
   let row = document.getElementsByTagName('td');   
   if(event.target.value == "red")
         {
           for(let i = 0 ; i < row.length; i++)
               { 
-                row[i].onmouseup = function() {
+                row[i].onmouseover = function() {
                   this.style.backgroundColor = 'red';
               }
           }
@@ -108,7 +79,7 @@ let hoverColorChange = document.getElementById("colors2").addEventListener("chan
         {
           for(let i = 0 ; i < row.length; i++)
               { 
-                row[i].onmouseup = function() {
+                row[i].onmouseover = function() {
                   this.style.backgroundColor = 'green';
               }
             }
@@ -117,7 +88,7 @@ let hoverColorChange = document.getElementById("colors2").addEventListener("chan
         {
           for(let i = 0 ; i < row.length; i++)
               { 
-                row[i].onmouseup = function() {
+                row[i].onmouseover = function() {
                   this.style.backgroundColor = 'blue';
               }
             }
@@ -126,28 +97,11 @@ let hoverColorChange = document.getElementById("colors2").addEventListener("chan
         {
           for(let i = 0 ; i < row.length; i++)
               { 
-                row[i].onmouseup = function() {
+                row[i].onmouseover = function() {
                   this.style.backgroundColor = 'orange';
               }
             }
           }
-        
-      //   if(event.target.value == "red")
-      //   {
-      //     let td = document.querySelector(".tr").addEventListener("click");
-      //     event.td.style.backgroundColor = "red";
-      //   }
-      // } 
-      
-        // if(event.target.value === "red")
-        //   {
-        //     table.onmouseover.style.backgroundColor = "red";
-        //     // if(0 == table.rows.length)
-        //     // hoverColorChange.rows[i].style.backgroundColor = "red";
-        //     // }
-        //   }
-
-
 })
   
    
