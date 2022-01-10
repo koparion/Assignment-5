@@ -4,8 +4,8 @@ let addingRow = document.getElementById("addRow").addEventListener("click", () =
     for(let i = 0; i < table.rows.length; i++)
    {
      //let newCol = table.rows[i].insertCell(-1);
-     let row = table.insertRow(-1)
-     row[i].insertCell(-1);
+    let row = table.insertRow(-1)
+    table.row[i].insertCell(-1);
    }
 })
 
@@ -55,14 +55,14 @@ let changeColor = document.getElementById("colors").addEventListener("change", (
       newT.style.backgroundColor = 'orange';
     }
   })
-   
-let hoverColorChange = document.getElementById("colors2").addEventListener("change", (event) => {
+
+let hoverColorChange = document.getElementById("colors2").addEventListener("mouseover", (event) => {
   let row = document.getElementsByTagName('td');   
   if(event.target.value == "red")
         {
           for(let i = 0 ; i < row.length; i++)
               { 
-                row[i].onmouseup = function() {
+                row[i].onmouseover = function() {
                   this.style.backgroundColor = 'red';
               }
           }
@@ -71,7 +71,7 @@ let hoverColorChange = document.getElementById("colors2").addEventListener("chan
         {
           for(let i = 0 ; i < row.length; i++)
               { 
-                row[i].onmouseup = function() {
+                row[i].onmouseover = function() {
                   this.style.backgroundColor = 'green';
               }
             }
@@ -80,7 +80,7 @@ let hoverColorChange = document.getElementById("colors2").addEventListener("chan
         {
           for(let i = 0 ; i < row.length; i++)
               { 
-                row[i].onmouseup = function() {
+                row[i].onmouseover = function() {
                   this.style.backgroundColor = 'blue';
               }
             }
@@ -89,7 +89,7 @@ let hoverColorChange = document.getElementById("colors2").addEventListener("chan
         {
           for(let i = 0 ; i < row.length; i++)
               { 
-                row[i].onmouseup = function() {
+                row[i].onmouseover = function() {
                   this.style.backgroundColor = 'orange';
               }
             }
