@@ -1,14 +1,6 @@
 let table = document.getElementById("tbody");
 
 let addingRow = document.getElementById("addRow").addEventListener("click", () => {
-  //  document.querySelector("row").innerHTML += '<div class="col border border-dark">${row.children.length + 1}</div>';
-    // let row = document.querySelector(".row");  
-    //let newCol = document.createElement("td");
-     //newRow.appendChild(newCol);
-  // newRow.classList.add("border-dark my-2")
-
-    // let newRow = document.createElement("tr");
-    // table.append(newRow);
     for(let i = 0; i < table.rows.length; i++)
    {
      //let newCol = table.rows[i].insertCell(-1);
@@ -40,9 +32,9 @@ let changeColor = document.getElementById("colors").addEventListener("change", (
    let newT = document.querySelector(".table");
    if("" === event.target.value)
    {
-     newT.style.backgroundColor = null;
+        newT.style = null;
    }
-   if("red" === event.target.value)
+  if("red" === event.target.value)
     {
       for(let i = 0; i < table.rows.length; i++)
         {
@@ -63,35 +55,6 @@ let changeColor = document.getElementById("colors").addEventListener("change", (
       newT.style.backgroundColor = 'orange';
     }
   })
-
-  // let hoverColorChange = document.getElementById("colors").addEventListener("click", (event) => {
-  //   //let hoverChange = document.querySelector(".table").addEventListener("mouseover");
-  //   if("" === event.target.value)
-  //   {
-  //     newT.style.backgroundColor = null;
-  //   }
-  //   if("red" === event.target.value)
-  //    {
-  //      for(let i = 0; i < table.rows.length; i++)
-  //        {
-  //          //let newCol = table.rows[i].insertCell(-1);
-  //          newT.style.backgroundColor = "red";
-  //        }
-  //    }
-  //    if("green" === event.target.value)
-  //    {
-  //      hoverChange = 
-  //      }
-  //    }
-  //    if("blue" === event.target.value)
-  //    {
-  //      newT.style.backgroundColor = 'blue';
-  //    }
-  //    if("orange" === event.target.value)
-  //    {
-  //      newT.style.backgroundColor = 'orange';
-  //    }
-  //  })
    
 let hoverColorChange = document.getElementById("colors2").addEventListener("change", (event) => {
   let row = document.getElementsByTagName('td');   
@@ -131,24 +94,7 @@ let hoverColorChange = document.getElementById("colors2").addEventListener("chan
               }
             }
           }
-        
-      //   if(event.target.value == "red")
-      //   {
-      //     let td = document.querySelector(".tr").addEventListener("click");
-      //     event.td.style.backgroundColor = "red";
-      //   }
-      // } 
-      
-        // if(event.target.value === "red")
-        //   {
-        //     table.onmouseover.style.backgroundColor = "red";
-        //     // if(0 == table.rows.length)
-        //     // hoverColorChange.rows[i].style.backgroundColor = "red";
-        //     // }
-        //   }
-
-
 })
-  
-   
-  
+let resetColor = document.getElementById("reset").addEventListener("click", () =>{
+  document.querySelector(".table").style = null;
+})
