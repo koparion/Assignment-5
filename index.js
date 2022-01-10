@@ -1,5 +1,5 @@
 let table = document.getElementById("tbody");
-
+//●	add rows to the grid
 let addingRow = document.getElementById("addRow").addEventListener("click", () => {
     let row = table.insertRow(table.rows.length)
     for(let i = 0; i < table.rows[0].cells.length; i++)
@@ -7,7 +7,7 @@ let addingRow = document.getElementById("addRow").addEventListener("click", () =
     row.insertCell(i);
    }
 })
-
+//●	add columns to the grid
 let addingCol = document.getElementById("addCol").addEventListener("click", () => { 
    for(let i = 0; i < table.rows.length; i++)
    {
@@ -15,19 +15,20 @@ let addingCol = document.getElementById("addCol").addEventListener("click", () =
      table.rows[i].insertCell();
    }
 })
-
+//●	remove rows from the grid
 let removeRow = document.getElementById("removeRow").addEventListener("click", () => {
   table.deleteRow(0);
 })
-
+//●	remove columns from the grid
 let removeColumn = document.getElementById("removeCol").addEventListener("click", () => {
   for(let i = 0; i < table.rows.length; i++)
    { 
       table.rows[i].deleteCell(-1); 
    } 
 })
-
-let changeColor = document.getElementById("colors").addEventListener("change", (event) => {
+//●	fill all uncolored cells with the currently selected color
+//●	fill all cells with the currently selected color
+let changeColor = document.getElementById("colors").addEventListener("click", (event) => {
    let newT = document.querySelector(".table");
    if("" === event.target.value)
    {
@@ -54,9 +55,14 @@ let changeColor = document.getElementById("colors").addEventListener("change", (
       newT.style.backgroundColor = 'orange';
     }
   })
-
+ //● click on a single cell, changing its color to the currently selected color
+//●	click and hold (mouseover) from a single cell (start) to a different cell (end) such that all affected/hovered-over cells from start to end change to the currently selected color
 let hoverColorChange = document.getElementById("colors2").addEventListener("mouseover", (event) => {
   let row = document.getElementsByTagName('td');   
+  if("" === event.target.value)
+   { 
+
+   }
   if(event.target.value == "red")
         {
           for(let i = 0 ; i < row.length; i++)
@@ -94,6 +100,11 @@ let hoverColorChange = document.getElementById("colors2").addEventListener("mous
             }
           }
 })
-let resetColor = document.getElementById("reset").addEventListener("click", () =>{
-  document.querySelector(".table").style = null;
+// ●	clear all cells/restore all cells to their original/initial color
+let resetColor = document.getElementById("reset").addEventListener("click", (event) =>{
+  let select = document.querySelector(".table").style = null;
+  let clear = document.getElementsByTagName('td');
+  [...clear].forEach(clear => {
+    clear.style.backgroundColor = null;
+  });
 })
